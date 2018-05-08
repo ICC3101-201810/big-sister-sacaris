@@ -6,13 +6,24 @@ using System.Threading.Tasks;
 
 namespace LabPOO
 {
+    public delegate void Del(object sender, string name, int stock, int price, string unit);
+    public static void DelegateMethod(object sender, string name, int stock, int price, string unit)
+    {
+
+    }
+
+    public event Del Nevento;
+
+    
+
     class Product
     {
+        
+
         private string name;
         private int stock;
         private int price; //Price for one unit of the product
         private string unit;
-
         public Product(string name, int price, int stock, string unit)
         {
             this.name = name;
